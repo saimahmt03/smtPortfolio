@@ -1,0 +1,114 @@
+/* Basic Layout and Design */
+html, body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    /*width: 100%; /* Ensure header takes full width */
+    flex-shrink: 0;
+}
+
+main {
+    display: flex;
+    flex-grow: 1; 
+    flex-wrap: nowrap; /* Prevents wrapping */
+    justify-content: space-between; /* Ensures columns stay apart */
+    align-items: flex-start;
+    padding: 20px;
+    min-height: 0;
+}
+
+.column {
+    flex: 1;
+    min-width: 300px; /* Ensures both columns stay visible */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.divider {
+    width: 2px;
+    background-color: #ccc;
+    margin: 0 20px;
+    height: auto; /* Prevents it from stretching too much */
+    align-self: center; /* Centers it properly */
+}
+
+.left-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-column {
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    color: #333;
+}
+
+.accordion {
+    width: 100%;
+}
+
+.accordion-header {
+    padding: 3px;
+    cursor: pointer;
+    font-size: 1em;
+    margin: 5px 0;
+    color: #0096FF;
+}
+
+.accordion-content {
+    display: none;
+}
+
+.accordion-content ul li a:hover {
+    text-decoration: underline;
+}
+
+.accordion-content ul li a {
+    color: #021b36;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: small;
+}
+
+footer {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 50px;
+    background-color: #333;
+    color: white;
+    width: 100%;
+}
+.p {
+    font-size: xx-small;
+    margin: 0;
+    padding: 0;
+}
+
+.profile-photo {
+    display: flex;
+    justify-content: flex-end; /* Align image to the right */
+    align-items: center; /* Center image vertically */
+}
+
+.profile-image {
+    max-width: 100%; /* Ensure responsiveness */
+    height: auto; /* Maintain aspect ratio */
+}
